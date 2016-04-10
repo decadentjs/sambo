@@ -1,0 +1,23 @@
+{
+  "name": "sambo",
+  "version": "0.0.1",
+  "description": "Converts a list of strings into a compact, readable representation with delimiters of choice",
+  "main": "index.js",
+  "bin" : {
+    "sambo": "./bin/sambo.js",
+    "sambo-cover": "./bin/cover.js"
+  },
+  "scripts": {
+    "test": "tap test/*.test.js"
+  },
+  "keywords": [
+  ],
+  "author": "Claudio Procida",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1",
+    "tap": "^5.7.1"
+  }
+}
