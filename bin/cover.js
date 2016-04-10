@@ -9,4 +9,4 @@ if (!args.string) {
   process.exit(1);
 }
 
-process.stdout.write(cover(args.string.split(args.separator).sort()));
+process.stdout.write(JSON.stringify(cover(args.string.split(args.separator).sort()), null, 2));

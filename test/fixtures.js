@@ -201,6 +201,10 @@ var FIXTURES = {
   ],
 
   ARRAYS: {
+    ALB_A_ER_GO_O_TO: ['albero', 'alba', 'alberto', 'albergo'],
+    ALBERO_FIORE: ['albero', 'fiore'],
+    PESCA_TORE_H_ERIA_IERA: ['pesca', 'pescatore', 'peschiera', 'pescheria'],
+    MARE_INA_IO_IA: ['mare', 'marina', 'marinaio', 'mario', 'maria'],
     ISIN_1: [
       'XS0258970051', 'XS0283199247', 'XS0299049527', 'XS0318345971', 'XS0484854483',
       'XS0648456167', 'XS0858481194', 'XS0875891615', 'XS0877809375', 'XS0894522795',

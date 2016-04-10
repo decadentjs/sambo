@@ -7,21 +7,21 @@ tap.equal(sambo(['albero'], '(', '|', ')'), 'albero');
 
 // Strings without a common radix
 tap.equal(sambo(['a', 'b', 'c'], '(', '|', ')'), 'a|b|c');
-tap.equal(sambo(['albero', 'fiore'], '(', '|', ')'), 'albero|fiore');
+tap.equal(sambo(FIXTURES.ARRAYS.ALBERO_FIORE, '(', '|', ')'), 'albero|fiore');
 
 // Strings with a common radix
-tap.equal(sambo(['albero', 'alba', 'alberto', 'albergo'], '(', '|', ')'), 'alb(a|er(go|o|to))');
-tap.equal(sambo(['pesca', 'pescatore', 'peschiera', 'pescheria'], '(', '|', ')'), 'pesc(a(|tore)|h(eria|iera))');
-tap.equal(sambo(['mare', 'marina', 'marinaio', 'mario', 'maria'], '(', '|', ')'), 'mar(e|i(a|na(|io)|o))');
+tap.equal(sambo(FIXTURES.ARRAYS.ALB_A_ER_GO_O_TO, '(', '|', ')'), 'alb(a|er(go|o|to))');
+tap.equal(sambo(FIXTURES.ARRAYS.PESCA_TORE_H_ERIA_IERA, '(', '|', ')'), 'pesc(a(|tore)|h(eria|iera))');
+tap.equal(sambo(FIXTURES.ARRAYS.MARE_INA_IO_IA, '(', '|', ')'), 'mar(e|i(a|na(|io)|o))');
 
 // Mixed strings
-tap.equal(sambo(['albero', 'alba', 'alberto', 'albergo', 'pesca', 'pescatore', 'peschiera', 'pescheria'], '(', '|', ')'), 'alb(a|er(go|o|to))|pesc(a(|tore)|h(eria|iera))');
+tap.equal(sambo(FIXTURES.ARRAYS.ALB_A_ER_GO_O_TO.concat(FIXTURES.ARRAYS.PESCA_TORE_H_ERIA_IERA), '(', '|', ')'), 'alb(a|er(go|o|to))|pesc(a(|tore)|h(eria|iera))');
 
 // Order of input doesn't matter
-tap.equal(sambo(['albero', 'fiore'], '(', '|', ')'),
-          sambo(['fiore', 'albero'], '(', '|', ')'));
-tap.equal(sambo(['albero', 'alba', 'alberto', 'albergo'], '(', '|', ')'),
-          sambo(['alba', 'albergo', 'albero', 'alberto'], '(', '|', ')'), 'alb(a|er(go|o|to))');
+tap.equal(sambo(FIXTURES.ARRAYS.ALBERO_FIORE, '(', '|', ')'),
+          sambo(Array.from(FIXTURES.ARRAYS.ALBERO_FIORE).reverse(), '(', '|', ')'));
+tap.equal(sambo(FIXTURES.ARRAYS.ALB_A_ER_GO_O_TO, '(', '|', ')'),
+          sambo(Array.from(FIXTURES.ARRAYS.ALB_A_ER_GO_O_TO).reverse(), '(', '|', ')'));
 
 // A real life example
 tap.equal(sambo(FIXTURES.ARRAYS.ISIN_1, '(', '|', ')'), FIXTURES.STRINGS.ISIN_1);
