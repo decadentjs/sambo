@@ -1,5 +1,6 @@
 var tap = require('tap'),
-  sambo = require('..');
+  sambo = require('..'),
+  FIXTURES = require('./fixtures');
 
 // It should return the string unaltered if the array has a single element
 tap.equal(sambo(['albero'], '(', '|', ')'), 'albero');
@@ -21,3 +22,6 @@ tap.equal(sambo(['albero', 'fiore'], '(', '|', ')'),
           sambo(['fiore', 'albero'], '(', '|', ')'));
 tap.equal(sambo(['albero', 'alba', 'alberto', 'albergo'], '(', '|', ')'),
           sambo(['alba', 'albergo', 'albero', 'alberto'], '(', '|', ')'), 'alb(a|er(go|o|to))');
+
+// A real life example
+tap.equal(sambo(FIXTURES.ARRAYS.ISIN_1, '(', '|', ')'), FIXTURES.STRINGS.ISIN_1);
