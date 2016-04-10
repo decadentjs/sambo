@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/decadentjs/sambo.svg?branch=master)](https://travis-ci.org/decadentjs/sambo)
+
 # sambo
 
 Converts a list of strings into a compact, readable representation with delimiters of choice
