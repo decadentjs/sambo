@@ -2,6 +2,8 @@ var tap = require('tap'),
   sambo = require('..'),
   FIXTURES = require('./fixtures');
 
+require('array.from').shim();
+
 // It should return the string unaltered if the array has a single element
 tap.equal(sambo(['albero'], '(', '|', ')'), 'albero');
 

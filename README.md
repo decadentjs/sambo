@@ -12,6 +12,10 @@ sambo aria:arianna : [ + ]
 # => aria[+nna]
 ```
 
+# what?
+
+In Irish slang, [sambo](https://en.wiktionary.org/wiki/sambo) is the abbreviation of sandwich. The name hints at the strings being sliced and interleaved with bread, the delimiters.
+
 # why?
 
 Useful when you need to pass long lists of URL params

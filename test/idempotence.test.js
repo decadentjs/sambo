@@ -3,6 +3,8 @@ var tap = require('tap'),
   parser = require('../lib/parser'),
   FIXTURES = require('./fixtures');
 
+require('array.from').shim();
+
 // It should return the string unaltered if the array has a single element
 tap.same(parser(sambo(['albero'], '(', '|', ')'), '(', '|', ')'), ['albero']);
 

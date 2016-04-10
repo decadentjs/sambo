@@ -13,7 +13,9 @@
   "keywords": [],
   "author": "Claudio Procida",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "array.from": "^1.0.1"
+  },
   "devDependencies": {
     "jshint": "^2.9.1",
     "tap": "^5.7.1"
