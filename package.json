@@ -1,6 +1,6 @@
 {
   "name": "sambo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Converts a list of strings into a compact, readable representation with delimiters of choice",
   "main": "index.js",
   "bin": {
