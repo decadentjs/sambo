@@ -1,6 +1,6 @@
 {
   "name": "sarnie",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Converts a list of strings into a compact, readable representation with delimiters of choice",
   "main": "index.js",
   "bin": {
