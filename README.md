@@ -1,26 +1,26 @@
-[![Build Status](https://travis-ci.org/decadentjs/sambo.svg?branch=master)](https://travis-ci.org/decadentjs/sambo)
+[![Build Status](https://travis-ci.org/decadentjs/sarnie.svg?branch=master)](https://travis-ci.org/decadentjs/sarnie)
 
-# sambo
+# sarnie
 
 Converts a list of strings into a compact, readable representation with delimiters of choice
 
 ```
-sambo 'alba,albero,albergo,alberto'
+sarnie 'alba,albero,albergo,alberto'
 # => alb(a|er(go|o|to))
 
-sambo 'aria:arianna' ':' '[' '+' ']'
+sarnie 'aria:arianna' ':' '[' '+' ']'
 # => aria[+nna]
 ```
 
-# what?
+## What?
 
-In Irish slang, [sambo](https://en.wiktionary.org/wiki/sambo) is the abbreviation of sandwich. The name hints at the strings being sliced and interleaved with bread, the delimiters.
+In British slang, [sarnie](https://en.wiktionary.org/wiki/sarnie) is the abbreviation of sandwich. The name hints at the strings being sliced and interleaved with bread, the delimiters.
 
-# why?
+## Why?
 
 Useful when you need to pass long lists of URL params
 
-# license
+## License
 
 Copyright (c) 2016-2017, Claudio Procida
 

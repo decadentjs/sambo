@@ -1,11 +1,11 @@
 {
-  "name": "sambo",
+  "name": "sarnie",
   "version": "0.0.2",
   "description": "Converts a list of strings into a compact, readable representation with delimiters of choice",
   "main": "index.js",
   "bin": {
-    "sambo": "./bin/sambo.js",
-    "sambo-cover": "./bin/cover.js"
+    "sarnie": "./bin/sarnie.js",
+    "sarnie-cover": "./bin/cover.js"
   },
   "scripts": {
     "test": "tap test/*.test.js"
