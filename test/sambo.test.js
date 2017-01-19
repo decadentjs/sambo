@@ -4,6 +4,15 @@ var tap = require('tap'),
 
 require('array.from').shim();
 
+// It doesn't mutate the input array
+var reversed = Array.from(FIXTURES.ARRAYS.ALBERO_FIORE).reverse();
+sambo(reversed, '(', '|', ')');
+tap.same(reversed, Array.from(FIXTURES.ARRAYS.ALBERO_FIORE).reverse());
+
+reversed = Array.from(FIXTURES.ARRAYS.ALB_A_ER_GO_O_TO).reverse();
+sambo(reversed, '(', '|', ')');
+tap.same(reversed, Array.from(FIXTURES.ARRAYS.ALB_A_ER_GO_O_TO).reverse());
+
 // It should return the string unaltered if the array has a single element
 tap.equal(sambo(['albero'], '(', '|', ')'), 'albero');
 
